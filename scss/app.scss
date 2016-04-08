@@ -39,13 +39,12 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
-@media #{$small-only} {
-  body {
-    background-color: #222;
-  }
-  #welcome {
-    color: #fafafa;
-  }
+
+body {
+  background-color: #222;
+}
+#welcome {
+  color: #fafafa;
 }
 
 #header,
@@ -54,7 +53,7 @@
 }
 
 .welcome-box {
-  @extend .hide-for-small-only;
+  @extend .show-for-medium-up;
   @include grid-column(12);
 }
 
@@ -63,8 +62,13 @@
 }
 
 .top-image {
-  @include grid-column(3);
+  @include grid-column(12);
 }
+
+#top-bar {
+  @extend .hide-for-medium-up;
+}
+
 
 @media #{$small-only} {
   .top-image {
@@ -75,5 +79,20 @@
 @media #{$medium-only} {
   .top-image {
     @include grid-column(6);
+  }
+}
+
+@media #{$medium-up}{
+  body {
+    background-color: #fafafa;
+  }
+  #welcome {
+    color:#222;
+  }
+}
+
+@media #{$large-up}{
+  .top-image{
+    @include grid-column(3);
   }
 }
