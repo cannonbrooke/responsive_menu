@@ -29,3 +29,4 @@ And you're set!
   * `scss/app.scss`: Application styles go here
 # foundation_grid_mobile
 # responsive_menu
+# responsive_menu
