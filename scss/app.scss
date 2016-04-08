@@ -38,3 +38,42 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+@media #{$small-only} {
+  body {
+    background-color: #222;
+  }
+  #welcome {
+    color: #fafafa;
+  }
+}
+
+#header,
+#main {
+  @include grid-row();
+}
+
+.welcome-box {
+  @extend .hide-for-small-only;
+  @include grid-column(12);
+}
+
+.top-banner {
+  @include grid-column(12);
+}
+
+.top-image {
+  @include grid-column(3);
+}
+
+@media #{$small-only} {
+  .top-image {
+    @include grid-column(12);
+  }
+}
+
+@media #{$medium-only} {
+  .top-image {
+    @include grid-column(6);
+  }
+}
